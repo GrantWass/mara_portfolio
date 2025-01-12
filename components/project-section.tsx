@@ -9,23 +9,33 @@ interface ProjectSectionProps {
 
 export function ProjectSection({ title, description, images }: ProjectSectionProps) {
   return (
-    <Card className="overflow-hidden">
-      <CardHeader>
-        <CardTitle className="text-2xl">{title}</CardTitle>
-        <CardDescription className="text-lg">{description}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {images.map((image, index) => (
-            <div key={index} className="relative aspect-video">
+    <Card className="overflow-hidden mb-8">
+      <CardContent className="p-0">
+        <div className="grid grid-cols-8 grid-rows-6 gap-2 aspect-[2/1]">
+          <div className="relative col-span-5 row-span-6">
+            <Image
+              src={images[0]}
+              alt={`${title} - Main Image`}
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
+              <CardTitle className="text-3xl font-bold text-white">{title}</CardTitle>
+            </div>
+          </div>
+          {images.slice(1, 4).map((image, index) => (
+            <div key={index} className="relative col-span-3 row-span-2">
               <Image
                 src={image}
-                alt={`${title} - Image ${index + 1}`}
+                alt={`${title} - Image ${index + 2}`}
                 fill
-                className="object-cover rounded-md"
+                className="object-cover"
               />
             </div>
           ))}
+        </div>
+        <div className="p-6">
+          <CardDescription className="text-lg">{description}</CardDescription>
         </div>
       </CardContent>
     </Card>
