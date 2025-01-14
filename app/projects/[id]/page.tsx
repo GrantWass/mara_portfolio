@@ -67,12 +67,15 @@ const projects = [
     }
   ]
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = projects.find(p => p.id === params?.id)
+  type tParams = Promise<{ id: string }>;
 
-  if (!project) {
-    notFound()
-  }
+  export default async function ProjectPage( props : { params: tParams }) {
+    const { id } = await props.params
+    const project = projects.find((p) => p.id === id)
+  
+    if (!project) {
+      notFound()
+    }
 
   return (
     <div className="min-h-screen bg-gray-100 py-12">
