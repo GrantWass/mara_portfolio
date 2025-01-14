@@ -1,13 +1,17 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 interface ProjectSectionProps {
+  id: string
   title: string
   description: string
   images: string[]
+  additionalText?: string
 }
 
-export function ProjectSection({ title, description, images }: ProjectSectionProps) {
+export function ProjectSection({ id, title, description, images, additionalText = '' }: ProjectSectionProps) {
   return (
     <Card className="overflow-hidden mb-8">
       <CardContent className="p-0">
@@ -35,7 +39,19 @@ export function ProjectSection({ title, description, images }: ProjectSectionPro
           ))}
         </div>
         <div className="p-6">
-          <CardDescription className="text-lg">{description}</CardDescription>
+        <CardDescription className="text-lg">{description}</CardDescription>
+        </div>
+
+        <div className="flex flex-row sm:flex-row justify-between items-start sm:items-center gap-4 ml-6 mr-6 mb-4">
+          {additionalText && (
+            <div>
+              <p className="text-sm text-gray-600">{additionalText}</p>
+              
+            </div>
+          )}
+          <Button asChild>
+            <Link href={`/projects/${id}`}>Learn More</Link>
+          </Button>
         </div>
       </CardContent>
     </Card>
