@@ -23,7 +23,7 @@ const projects = [
       "/mini image CS middle 1.jpg",
       "/cs 5 1.png",
     ],
-    additionalText: "Web Design Magazine | Partners: Brayden Kirk, Hobey Stanton",
+    additionalText: "Work Design Magazine | Partners: Brayden Kirk, Hobey Stanton",
     articleUrl: "https://www.workdesign.com/2024/09/collaboration-station-by-mara-wasserman-brayden-kirk-and-hobey-stanton/"
   },
   {
