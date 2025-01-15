@@ -46,7 +46,8 @@ const projects = [
       "/AE 10.jpg",
       "/AE-11.jpg",
     ],
-    additionalText: "Fall 2022 Collaborate | Professors Darin Hanigan and Vanessa Schutte | Partners: Sarah Johnson, Abby Mowbray, Jade Filbey"
+    additionalText: "Fall 2022 Collaborate | Professors Darin Hanigan and Vanessa Schutte | Partners: Sarah Johnson, Abby Mowbray, Jade Filbey",
+    videoUrl: "https://youtu.be/J0NXNiQyAFc?si=JEmRklwaQpfHl-eZ"
   },
   {
     id: 'artisan-alley-apartments',
@@ -71,7 +72,6 @@ const projects = [
       "/AA 12.jpg",
     ],
     additionalText: "Fall 2023 Advanced Arch Design | Professor Emily Andersen | Partners- Alissa Valch, Angela Vu",
-    videoUrl: "https://youtu.be/J0NXNiQyAFc?si=JEmRklwaQpfHl-eZ"
   }
 ]
 
