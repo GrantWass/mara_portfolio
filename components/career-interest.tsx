@@ -10,9 +10,9 @@ const interests = [
 ]
 
 const goals = [
-  "Leed Certification",
+  "LEED Certification",
   "Licensure",
-  "Well Certification"
+  "WELL Certification"
 ]
 
 
@@ -29,7 +29,7 @@ export function CareerInterests() {
             <li key={index} className="text-gray-700 text-sm">{interest}</li>
           ))}
         </ul>
-        <ul className="list-disc list-inside space-y-2 mt-4">
+        <ul className="list-disc list-inside space-y-2">
         <h3 className="font-semibold mb-2">Goals</h3>
           {goals.map((interest, index) => (
             <li key={index} className="text-gray-700 text-sm">{interest}</li>

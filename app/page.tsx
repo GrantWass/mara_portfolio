@@ -2,6 +2,8 @@ import { ProjectSection } from '@/components/project-section'
 import { Timeline } from "@/components/timeline"
 import { CareerInterests } from '@/components/career-interest'
 import { Skills } from '@/components/skills'
+import { SocialLinks } from '@/components/social-links'
+import { Education } from '@/components/education'
 import Head from 'next/head'
 
 
@@ -21,7 +23,8 @@ const projects = [
       "/mini image CS middle 1.jpg",
       "/cs 5 1.png",
     ],
-    additionalText: "Partners: Brayden Kirk, Hobey Stanton"
+    additionalText: "Web Design Magazine | Partners: Brayden Kirk, Hobey Stanton",
+    articleUrl: "https://www.workdesign.com/2024/09/collaboration-station-by-mara-wasserman-brayden-kirk-and-hobey-stanton/"
   },
   {
     id: 'ashleaf-elementary',
@@ -67,7 +70,8 @@ const projects = [
       "/AA 11.jpg",
       "/AA 12.jpg",
     ],
-    additionalText: "Fall 2023 Advanced Arch Design | Professor Emily Andersen | Partners- Alissa Valch, Angela Vu"
+    additionalText: "Fall 2023 Advanced Arch Design | Professor Emily Andersen | Partners- Alissa Valch, Angela Vu",
+    videoUrl: "https://youtu.be/J0NXNiQyAFc?si=JEmRklwaQpfHl-eZ"
   }
 ]
 
@@ -75,32 +79,61 @@ const timelineItems = [
   {
     company: "BWBR Architects",
     role: "Architectural Intern",
-    startDate: "May 2024 - Present"
+    startDate: "May 2024 - Present",
+    bulletPoints: [
+      "Participate in client meetings to discuss design ideas",
+      "Produce detailed construction documents using Revit for healthcare projects",
+      "Collaborate with multiple disciplinary teams to ensure project deadlines are met"
+    ]
   },
   {
     company: "University of Nebraska",
     role: "Graduate Learning Assistant",
-    startDate: "August 2023 - Present"
+    startDate: "August 2023 - Present",
+    bulletPoints: [
+      "Assist professors with attendance, grading, and communication with students",
+      "Hold office hours to ensure success of students",
+      "Lead both architecture and construction management courses when professor is absent"
+    ]
   },
   {
     company: "University of Nebraska",
     role: "Nebraska Athletics Tutor",
-    startDate: "March 2023 - May 2023"
+    startDate: "March 2023 - May 2023",
+    bulletPoints: [
+      "Tutor Student-Athletes in architecture and construction management courses",
+      "Prepare weekly lessons and assist with homework help",
+      "Communicate with academic advisors and professors on student’s progress"
+    ]
   },
   {
     company: "University of Nebraska",
-    role: "International Welcom Team",
-    startDate: "August 2022 - January 2023"
+    role: "International Welcome Team",
+    startDate: "August 2022 - January 2023",
+    bulletPoints: [
+      "Lead 10-15 International Student groups during Orientation",
+      "Communicate flight and housing information to ensure successful check in",
+      "Facilitate large and small group discussions about University amenities"
+    ]
   },
   {
     company: "UNL College of Architecture",
     role: "Peer Mentor and Student Ambassador",
-    startDate: "August 2021 - May 2023"
+    startDate: "August 2021 - May 2023",
+    bulletPoints: [
+      "Mentor 10 first year students in the College of Architecture",
+      "Give tours to prospective students and assist in recruiting events",
+      "Answer questions and provide advice for success in college"
+    ]
   },
   {
     company: "Cracker Barrel",
     role: "Server",
-    startDate: "June 2019- Present"
+    startDate: "June 2019- April 2024",
+    bulletPoints: [
+      "Seat, serve, and clean 5-10 table sections",
+      "Multitask while remaining professional in fast-paced environments"
+    ]
   },
 ]
 
@@ -128,8 +161,9 @@ export default function PortfolioPage() {
         <meta property="og:url" content="https://your-portfolio-site.com" />
       </Head>
       <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">My Portfolio | Mara Wasserman | Architect</h1>
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          <h1 className="text-3xl font-bold text-gray-900">Mara's Portfolio | Architect</h1>
+          <SocialLinks />
         </div>
       </header>
       <main>
@@ -145,8 +179,11 @@ export default function PortfolioPage() {
           <Timeline items={timelineItems} />
         </div>
 
-        <div className="grid place-items-center mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+          <div className="flex items-center justify-center">
+            <Education />
+          </div>
+          <div className="space-y-6">
             <CareerInterests />
             <Skills />
           </div>
