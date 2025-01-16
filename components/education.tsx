@@ -12,7 +12,9 @@ const educationData: EducationItem[] = [
     degree: "Master of Architecture",
     institution: "University of Nebraska-Lincoln",
     year: "Expected 2025",
-    details: []
+    details: [
+      "Unicameral Design Magazine Editor"
+    ]
   },
   {
     degree: "Bachelor of Science in Design: Architecture",

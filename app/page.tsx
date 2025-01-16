@@ -83,7 +83,8 @@ const timelineItems = [
     bulletPoints: [
       "Participate in client meetings to discuss design ideas",
       "Produce detailed construction documents using Revit for healthcare projects",
-      "Collaborate with multiple disciplinary teams to ensure project deadlines are met"
+      "Collaborate with multiple disciplinary teams to ensure project deadlines are met",
+      "Key Projects: Avera Women and Chilren's Hospital Addition, FHS Catchings Clinin, Franklin County Clinic, Lawerence Country Hospital Renovation"
     ]
   },
   {
