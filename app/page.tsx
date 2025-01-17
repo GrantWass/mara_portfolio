@@ -29,7 +29,7 @@ const projects = [
   {
     id: 'ashleaf-elementary',
     title: "Ashleaf Elementary | DLR Design Studio Scholarship Winner",
-    description: "Located in Box Elder, South Dakota, Ashleaf Elementary uses free address learning where students nor teachers own a space, but rather move throughout different size classrooms throughout the day.",
+    description: "Ashleaf Elementary, located in Box Elder, South Dakota, reimagines the traditional learning environment through innovative spatial design, connection to community, and collaboration.",
     images: [
       "/MAIN IMAGE AE.jpg",
       "/mini image AE top.jpg",
@@ -52,7 +52,7 @@ const projects = [
   {
     id: 'artisan-alley-apartments',
     title: "Artisan Alley Apartments",
-    description: " Artisan Alley Apartments looks to provide a space for makers to thrive. This space is catered to those who work from home and want to continue to pursue a passion or add a second source of income via making goods.",
+    description: "Nestled just west of the Nebraska State Capitol in downtown Lincoln, Nebraska, Artisan Alley Apartments is a vibrant residential community designed to support and celebrate the creative spirit of modern makers. Catering to those who work from home and seek to pursue their passions or generate additional income through crafting, the complex blends living, working, and learning into one dynamic environment. ",
     images: [
       "/MAIN IMAGE AA (1).jpg",
       "/mini image AA top.jpg",
