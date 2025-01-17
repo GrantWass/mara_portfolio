@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 const skills = [
   { category: "Modeling", items: ["AutoCAD", "Revit", "Rhino", "SketchUp"] },
   { category: "Rendering", items: ["Enscape", "Lumion", "Vray"] },
-  { category: "Post Production", items: ["Illustrator", "Indesign", "Microsoft Suite", "Photoshop"] },
+  { category: "Post Production", items: ["Illustrator", "Indesign", "Microsoft Suite", "Photoshop", "Bluebeam"] },
 ]
 
 export function Skills() {
