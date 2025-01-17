@@ -15,13 +15,9 @@ const projects = [
     images: [
       "/MAIN IMAGE CS 1.png",
       "/mini image cs 1.png",
-      "/cs 4 1.png",
-      "/mini image cs bottom 1.png",
-      "/cs 1 1.jpg",
-      "/cs 2 1.jpg",
-      "/cs 3 1.jpg",
-      "/mini image CS middle 1.jpg",
       "/cs 5 1.png",
+      "/mini image cs bottom 1.png",
+
     ],
     additionalText: "Work Design Magazine | Partners: Brayden Kirk, Hobey Stanton",
     articleUrl: "https://www.workdesign.com/2024/09/collaboration-station-by-mara-wasserman-brayden-kirk-and-hobey-stanton/"
@@ -34,17 +30,8 @@ const projects = [
       "/MAIN IMAGE AE.jpg",
       "/mini image AE top.jpg",
       "/mini image AE middle.jpg",
-      "/AE 5.jpg",
-      "/AE 1.jpg",
-      "/AE-2.jpg",
-      "/AE 3.jpg",
-      "/AE 4.jpg",
-      "/AE 6.jpg",
-      "/AE 7.jpg",
-      "/AE 8.jpg",
-      "/AE 9.jpg",
-      "/AE 10.jpg",
-      "/AE-11.jpg",
+      "/sc1.png",
+
     ],
     additionalText: "Fall 2022 Collaborate | Professors Darin Hanigan and Vanessa Schutte | Partners: Sarah Johnson, Abby Mowbray, Jade Filbey",
     videoUrl: "https://youtu.be/J0NXNiQyAFc?si=JEmRklwaQpfHl-eZ"
@@ -58,18 +45,7 @@ const projects = [
       "/mini image AA top.jpg",
       "/mini image AA middle.jpg",
       "/mini image AA bottom.jpg",
-      "/AA 5.jpg",
-      "/AA 1.jpg",
-      "/AA-2.jpg",
-      "/AA 3.jpg",
-      "/AA 4.jpg",
-      "/AA 6.jpg",
-      "/AA 7.jpg",
-      "/AA 8.jpg",
-      "/AA 9.jpg",
-      "/AA 10.jpg",
-      "/AA 11.jpg",
-      "/AA 12.jpg",
+
     ],
     additionalText: "Fall 2023 Advanced Arch Design | Professor Emily Andersen | Partners- Alissa Valch, Angela Vu",
   }
@@ -81,10 +57,10 @@ const timelineItems = [
     role: "Architectural Intern",
     startDate: "May 2024 - Present",
     bulletPoints: [
-      "Participate in client meetings to discuss design ideas",
-      "Produce detailed construction documents using Revit for healthcare projects",
-      "Collaborate with multiple disciplinary teams to ensure project deadlines are met",
-      "Key Projects: Avera Women and Chilren's Hospital Addition, FHS Catchings Clinin, Franklin County Clinic, Lawerence Country Hospital Renovation"
+      "Participate in client meetings to discuss plans and design ideas while offering solutions to problems that arise",
+      "Produce detailed construction documents in Revit while collaborating with consultants to ensure deadlines are met",
+      "Work with teams across three offices on projects varying in size, scope, and design phase",
+      "Key Projects: Avera Women and Chilren's Hospital Addition, FHS Catchings Clinic, Franklin County Clinic, Lawerence Country Hospital Renovation"
     ]
   },
   {
