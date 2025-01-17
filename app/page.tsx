@@ -11,7 +11,7 @@ const projects = [
   {
     id: 'collaboration-station',
     title: "Collaboration Station | 2024 Next Work Student Design Competition Winner",
-    description: "The Collaboration Station, offers a new outlook on what we know as working in a hybrid environment. With endless variations to submerge ourselves within our favorite communities, workers can now choose where they want to work and what setting best suits their occupational needs.",
+    description: "The Collaboration Station offers a new outlook on what we know as working in a hybrid environment. With endless variations to submerge ourselves within our favorite communities, workers can now choose where they want to work and what setting best suits their occupational needs.",
     images: [
       "/MAIN IMAGE CS 1.png",
       "/mini image cs 1.png",
