@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Newspaper, Youtube} from 'lucide-react'
+import { Linkedin, Mail, Newspaper, Youtube, FileText} from 'lucide-react'
 import Link from 'next/link'
 
 export function SocialLinks() {
@@ -29,6 +29,15 @@ export function SocialLinks() {
       >
         <Youtube size={24} />
         <span className="sr-only">Project Video</span>
+      </Link>
+      <Link 
+        href="/Wasserman_Resume 2025.pdf" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-600 hover:text-gray-900 transition-colors"
+      >
+        <FileText size={24} />
+        <span className="sr-only">Resume</span>
       </Link>
     </div>
   )
