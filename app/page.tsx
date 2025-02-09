@@ -60,7 +60,7 @@ const timelineItems = [
       "Participate in client meetings to discuss plans and design ideas while offering solutions to problems that arise",
       "Produce detailed construction documents in Revit while collaborating with consultants to ensure deadlines are met",
       "Work with teams across three offices on projects varying in size, scope, and design phase",
-      "Key Projects: Avera Women and Chilren's Hospital Addition, FHS Catchings Clinic, Franklin County Clinic, Lawerence Country Hospital Renovation"
+      "Key Projects: Avera Women and Children's Hospital Addition, FHS Catchings Clinic, Franklin County Clinic, Lawrence Country Hospital Renovation"
     ]
   },
   {
