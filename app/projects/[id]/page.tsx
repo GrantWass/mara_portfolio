@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import Image from 'next/image'
+import ProjectDetails from './ProjectDetails'
 
 const projects = [
     {
@@ -110,120 +109,8 @@ const projects = [
     const project = projects.find((p) => p.id === id)
   
     if (!project) {
-      notFound()
+      notFound(); 
     }
-
-  return (
-    <div className="min-h-screen bg-gray-100 py-12">
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">{project.title}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <p className="text-gray-700 md:text-xl">{project.fullDescription}</p>
-
-              {project?.imageGroup2 != null && project?.imageGroup2?.length > 0 ? <div className="grid grid-cols-3 gap-4 mt-6 flex items-center justify-center">
-                {project.imageGroup1.map((image, index) => (
-                <div key={index} className="flex flex-col">
-                    <div className="relative aspect-video">
-                        <Image
-                            src={image.src || "/placeholder.svg"}
-                            alt={`${project.title} - ${image.caption}`}
-                            fill
-                            className="object-contain rounded-md"
-                        />
-                    </div>
-                    <p className="text-sm text-gray-600 text-center mt-2">{image.caption}</p>
-                </div>
-                ))}
-              </div> : false }
-
-              {project?.description2 && <p className="text-gray-700 md:text-xl">{project.description2}</p>}
-              {project?.imageGroup2 != null && project?.imageGroup2?.length > 0 ? <div className="grid grid-cols-3 gap-4 mt-6 flex items-center justify-center">
-                {project.imageGroup2.map((image, index) => (
-                <div key={index} className="flex flex-col">
-                    <div className="relative aspect-video">
-                        <Image
-                            src={image.src || "/placeholder.svg"}
-                            alt={`${project.title} - ${image.caption}`}
-                            fill
-                            className="object-contain rounded-md"
-                        />
-                    </div>
-                    <p className="text-sm text-gray-600 text-center mt-2">{image.caption}</p>
-                </div>
-                ))}
-              </div> : false}
-
-              {project?.description3 && <p className="text-gray-700 md:text-xl">{project.description3}</p>}
-              
-              {project?.imageGroup3 != null && project?.imageGroup3?.length > 0 ? <div className="grid grid-cols-3 gap-4 mt-6 flex items-center justify-center">
-                {project.imageGroup3.map((image, index) => (
-                <div key={index} className="flex flex-col">
-                    <div className="relative aspect-video">
-                        <Image
-                            src={image.src || "/placeholder.svg"}
-                            alt={`${project.title} - ${image.caption}`}
-                            fill
-                            className="object-contain rounded-md"
-                        />
-                    </div>
-                    <p className="text-sm text-gray-600 text-center mt-2">{image.caption}</p>
-                </div>
-                ))}
-              </div> : false}
-
-              {project?.description4 && <p className="text-gray-700 md:text-xl">{project.description4}</p>}
-
-              {project?.imageGroup4 != null && project?.imageGroup4?.length > 0 ? <div className="grid grid-cols-3 gap-4 mt-6 flex items-center justify-center">
-                {project.imageGroup4.map((image, index) => (
-                <div key={index} className="flex flex-col">
-                    <div className="relative aspect-video">
-                        <Image
-                            src={image.src || "/placeholder.svg"}
-                            alt={`${project.title} - ${image.caption}`}
-                            fill
-                            className="object-contain rounded-md"
-                        />
-                    </div>
-                    <p className="text-sm text-gray-600 text-center mt-2">{image.caption}</p>
-                </div>
-                ))}
-              </div> : false}
-
-              {project?.description5 && <p className="text-gray-700 md:text-xl">{project.description5}</p>}
-
-              {project?.imageGroup5 != null && project?.imageGroup5?.length > 0 ? <div className="grid grid-cols-3 gap-4 mt-6 flex items-center justify-center">
-                {project.imageGroup5.map((image, index) => (
-                <div key={index} className="flex flex-col">
-                    <div className="relative aspect-video">
-                        <Image
-                            src={image.src || "/placeholder.svg"}
-                            alt={`${project.title} - ${image.caption}`}
-                            fill
-                            className="object-contain rounded-md"
-                        />
-                    </div>
-                    <p className="text-sm text-gray-600 text-center mt-2">{image.caption}</p>
-                </div>
-                ))}
-              </div> : false}
-
-              {project?.description6 && <p className="text-gray-700 md:text-xl">{project.description6}</p>}
-              
-              {project.additionalText && (
-                <div>
-                  <p className="text-gray-600">{project.additionalText}</p>
-                </div>
-              )}
-              
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
-}
-
+  
+    return <ProjectDetails project={project} />; 
+  }
