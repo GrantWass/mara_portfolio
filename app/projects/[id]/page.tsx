@@ -42,9 +42,9 @@ const projects = [
         { src: "/AE 7.jpg", caption: "" },
       ],
       imageGroup3: [
-        { src: "/sc1.png", caption: "" },
-        { src: "/sc2.png", caption: "" },
-        { src: "/sc3.png", caption: "" },
+        { src: "/image0.jpeg", caption: "" },
+        { src: "/image1.jpeg", caption: "" },
+        { src: "/image2.jpeg", caption: "" },
       ],
       imageGroup4: [
         { src: "/AE 5.jpg", caption: "" },

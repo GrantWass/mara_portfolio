@@ -30,7 +30,7 @@ const projects = [
       "/MAIN IMAGE AE.jpg",
       "/mini image AE top.jpg",
       "/mini image AE middle.jpg",
-      "/sc1.png",
+      "/image2.jpeg",
 
     ],
     additionalText: "Fall 2022 Collaborate | Professors Darin Hanigan and Vanessa Schutte | Partners: Sarah Johnson, Abby Mowbray, Jade Filbey",
