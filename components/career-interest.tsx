@@ -5,13 +5,12 @@ const interests = [
   "Healthcare Design",
   "Higher Education Design",
   "Elementary Education Design",
-  "Details",
   "Structural Design"
 ]
 
 const goals = [
-  "LEED Certification",
-  "Licensure",
+  "Architecural Licensure",
+  "Ph.D in Sustainable Design",
   "WELL Certification"
 ]
 

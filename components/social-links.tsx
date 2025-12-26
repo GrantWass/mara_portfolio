@@ -4,7 +4,7 @@ import Link from 'next/link'
 export function SocialLinks() {
   return (
     <div className="flex items-center space-x-4">
-      <Link href="https://www.linkedin.com/in/mara-wasserman-4a7a3a232" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+      <Link href="https://www.linkedin.com/in/mara-wasserman-leed-ap-4a7a3a232/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
         <Linkedin size={24} />
         <span className="sr-only">LinkedIn</span>
       </Link>
@@ -31,7 +31,7 @@ export function SocialLinks() {
         <span className="sr-only">Project Video</span>
       </Link>
       <Link 
-        href="/Wasserman_Resume 2025.pdf" 
+        href="/Wasserman_Mara Resume.pdf" 
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-gray-900 transition-colors"

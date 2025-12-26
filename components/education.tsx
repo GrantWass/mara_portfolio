@@ -11,7 +11,7 @@ const educationData: EducationItem[] = [
   {
     degree: "Master of Architecture",
     institution: "University of Nebraska-Lincoln",
-    year: "Expected 2025",
+    year: "May 2025",
     details: [
       "Unicameral Design Magazine Editor"
     ]
@@ -19,13 +19,12 @@ const educationData: EducationItem[] = [
   {
     degree: "Bachelor of Science in Design: Architecture",
     institution: "University of Nebraska-Lincoln",
-    year: "2023",
+    year: "May 2023",
     details: [
-        "Graduated with Distinction",
-        "Alpha Rho Chi (Member)",
+        "Alpha Rho Chi",
         "Campus Ministry Social Media Director",
-        "Student Blogger",
-        "Deans list 2020-2023"
+        "Student Ambassador",
+        "Peer Mentor"
     ]
   }
 ]

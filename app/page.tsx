@@ -4,7 +4,9 @@ import { CareerInterests } from '@/components/career-interest'
 import { Skills } from '@/components/skills'
 import { SocialLinks } from '@/components/social-links'
 import { Education } from '@/components/education'
+import { Licences } from '@/components/liscences'
 import Head from 'next/head'
+import { Volunteering } from '@/components/volunteering'
 
 
 const projects = [
@@ -53,9 +55,19 @@ const projects = [
 
 const timelineItems = [
   {
+    company: "Reddymade Architecture & Design",
+    role: "Architectural Designer",
+    startDate: "September 2025 - Present",
+    bulletPoints: [
+      "Developed detailed construction documents and technical drawings in Revit to support project delivery and accuracy.",
+      "Collaborated effectively with project teams in a fully remote environment, ensuring seamless coordination and consistent project outcomes.",
+      "Key Projects: NYC DOB Pedestrian Protection, St. Mary's Church, Boulder House",
+    ]
+  },
+  {
     company: "BWBR Architects",
     role: "Architectural Intern",
-    startDate: "May 2024 - Present",
+    startDate: "May 2024 - September 2025",
     bulletPoints: [
       "Participate in client meetings to discuss plans and design ideas while offering solutions to problems that arise",
       "Produce detailed construction documents in Revit while collaborating with consultants to ensure deadlines are met",
@@ -66,7 +78,7 @@ const timelineItems = [
   {
     company: "University of Nebraska",
     role: "Graduate Learning Assistant",
-    startDate: "August 2023 - Present",
+    startDate: "August 2023 - May 2025",
     bulletPoints: [
       "Assist professors with attendance, grading, and communication with students",
       "Hold office hours to ensure success of students",
@@ -103,22 +115,13 @@ const timelineItems = [
       "Answer questions and provide advice for success in college"
     ]
   },
-  {
-    company: "Cracker Barrel",
-    role: "Server",
-    startDate: "June 2019- April 2024",
-    bulletPoints: [
-      "Seat, serve, and clean 5-10 table sections",
-      "Multitask while remaining professional in fast-paced environments"
-    ]
-  },
 ]
 
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Head>
-        <title>Mara Wasserman | Architect Portfolio</title>
+        <title>Mara Wasserman | Architect Portfolio </title>
         <meta
           name="description"
           content="Explore the architectural projects, career journey, and skills of Mara Wasserman."
@@ -139,7 +142,7 @@ export default function PortfolioPage() {
       </Head>
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-gray-900">Mara&apos;s Portfolio | Architect</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Mara&apos;s Portfolio | Architectural Designer | LEED AP BD+C</h1>
           <SocialLinks />
         </div>
       </header>
@@ -157,10 +160,12 @@ export default function PortfolioPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
-          <div className="flex items-center justify-center">
+          <div className="space-y-6">
             <Education />
+            <Volunteering />
           </div>
           <div className="space-y-6">
+            <Licences />
             <CareerInterests />
             <Skills />
           </div>
