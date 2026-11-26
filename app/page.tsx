@@ -1,15 +1,15 @@
+import { sidewalkSheds } from '@/lib/sidewalk-sheds'
 import { ProjectSection } from '@/components/project-section'
 import { Timeline } from "@/components/timeline"
 import { CareerInterests } from '@/components/career-interest'
 import { Skills } from '@/components/skills'
-import { SocialLinks } from '@/components/social-links'
 import { Education } from '@/components/education'
 import { Licences } from '@/components/liscences'
-import Head from 'next/head'
 import { Volunteering } from '@/components/volunteering'
 
 
 const projects = [
+  sidewalkSheds,
   {
     id: 'collaboration-station',
     title: "Collaboration Station | 2024 Next Work Student Design Competition Winner",
@@ -55,13 +55,24 @@ const projects = [
 
 const timelineItems = [
   {
+    company: "Reddi Inc.",
+    role: "Architectural Designer",
+    startDate: "December 2025 - Present",
+    bulletPoints: [
+      "Prepared comprehensive permit drawing sets for residential projects in accordance with applicable building codes and jurisdictional requirements.",
+      "Managed on-site construction activities, performing field observations and coordinating with contractors to ensure work aligned with design intent.",
+      "Developed high-quality 3D visualizations and renderings for client presentations and project communication.",
+      "Key Projects: St. Mary, F St., Universal Pure",
+    ]
+  },
+  {
     company: "Reddymade Architecture & Design",
     role: "Architectural Designer",
-    startDate: "September 2025 - Present",
+    startDate: "September 2025 - July 2026",
     bulletPoints: [
       "Developed detailed construction documents and technical drawings in Revit to support project delivery and accuracy.",
       "Collaborated effectively with project teams in a fully remote environment, ensuring seamless coordination and consistent project outcomes.",
-      "Key Projects: NYC DOB Pedestrian Protection, St. Mary's Church, Boulder House",
+      "Key Projects: NYC DOB Pedestrian Protection, Boulder House, M/Y Sihaya Yacht",
     ]
   },
   {
@@ -72,7 +83,7 @@ const timelineItems = [
       "Participate in client meetings to discuss plans and design ideas while offering solutions to problems that arise",
       "Produce detailed construction documents in Revit while collaborating with consultants to ensure deadlines are met",
       "Work with teams across three offices on projects varying in size, scope, and design phase",
-      "Key Projects: Avera Women and Children's Hospital Addition, FHS Catchings Clinic, Franklin County Clinic, Lawrence Country Hospital Renovation"
+      "Key Projects: Avera Women and Children's Hospital Addition, FHS Catchings Clinic, Lawrence County Hospital Renovation"
     ]
   },
   {
@@ -82,7 +93,8 @@ const timelineItems = [
     bulletPoints: [
       "Assist professors with attendance, grading, and communication with students",
       "Hold office hours to ensure success of students",
-      "Lead both architecture and construction management courses when professor is absent"
+      "Led lectures, discussions, and course content delivery in the professor’s absence",
+      "Courses: Structural Optimization, Built Environment Technological Systems"
     ]
   },
   {
@@ -119,47 +131,27 @@ const timelineItems = [
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Mara Wasserman | Architect Portfolio </title>
-        <meta
-          name="description"
-          content="Explore the architectural projects, career journey, and skills of Mara Wasserman."
-        />
-        <meta
-          name="keywords"
-          content="Mara Wasserman, architect portfolio, Collaboration Station, Ashleaf Elementary, Artisan Alley Apartments, architectural projects, design, hybrid work environments, free address learning, makerspaces"
-        />
-        <meta name="author" content="Mara Wasserman" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Mara Wasserman | Architect Portfolio" />
-        <meta
-          property="og:description"
-          content="Explore the architectural designs of Mara Wasserman, including hybrid workspaces and free address learning environments."
-        />
-        <meta property="og:image" content="/MAIN IMAGE CS 1.png" />
-        <meta property="og:url" content="https://your-portfolio-site.com" />
-      </Head>
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-gray-900">Mara&apos;s Portfolio | Architectural Designer | LEED AP BD+C</h1>
-          <SocialLinks />
-        </div>
-      </header>
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="space-y-12">
-            {projects.map((project) => (
-              <ProjectSection key={project.id} {...project} />
-            ))}
+    <div>
+      <main className="site-width">
+        <section className="py-10 sm:py-14">
+          <p className="eyebrow mb-4">Architecture &amp; design</p>
+          <h1 className="max-w-4xl text-2xl font-medium leading-tight tracking-tight sm:text-3xl">Spaces for connection.{' '}<span className="text-gray-500">Design for everyday life.</span></h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">Selected work by Mara Wasserman, exploring how architecture can support communities, shape shared experiences, and enrich the everyday.</p>
+        </section>
+        <section id="work" className="pb-20 sm:pb-28">
+          <div className="section-heading"><h2>Selected work</h2><span>Architecture · Public space · Community</span></div>
+          <div className="grid gap-x-8 gap-y-14 md:grid-cols-2">
+            {projects.map((project) => <ProjectSection key={project.id} {...project} />)}
           </div>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-center mb-10">My Journey</h1>
+        </section>
+        <section id="experience" className="pb-20 sm:pb-28">
+          <div className="section-heading"><h2>Experience</h2><span>Practice, teaching &amp; collaboration</span></div>
           <Timeline items={timelineItems} />
-        </div>
+        </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+        <section id="about" className="pb-20">
+          <div className="section-heading"><h2>Background</h2><span>Education, credentials &amp; interests</span></div>
+        <div className="background-grid grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <Education />
             <Volunteering />
@@ -170,6 +162,7 @@ export default function PortfolioPage() {
             <Skills />
           </div>
         </div>
+        </section>
       </main>
     </div>
   )

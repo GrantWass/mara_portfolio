@@ -13,7 +13,7 @@ const educationData: EducationItem[] = [
     institution: "University of Nebraska-Lincoln",
     year: "May 2025",
     details: [
-      "Unicameral Design Magazine Editor"
+      "Unicameral Design Magazine Writer"
     ]
   },
   {

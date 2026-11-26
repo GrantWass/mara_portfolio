@@ -3,10 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 interface CertificationItem {
   title: string
   origin: string
-  date: string
+  date?: string
 }
 
 const certData: CertificationItem[] = [
+  {
+    title: "Associate AIA",
+    origin: "American Institute of Architects · Associate membership",
+  },
   {
     title: "LEED AP Building Design + Construction",
     origin: "U.S. Green Building Council",
@@ -23,14 +27,14 @@ export function Licences() {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">Licences and Certifications</CardTitle>
+        <CardTitle className="text-2xl font-bold">Certifications & Memberships</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-6">
           {certData.map((item, index) => (
             <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
               <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-sm text-gray-600">{item.origin}, {item.date}</p>
+              <p className="text-sm text-gray-600">{item.origin}{item.date && `, ${item.date}`}</p>
             </div>
           ))}
         </div>

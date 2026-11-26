@@ -8,7 +8,7 @@ export function SocialLinks() {
         <Linkedin size={24} />
         <span className="sr-only">LinkedIn</span>
       </Link>
-      <Link href="mailto:mwasserman3@huskers.unl.edu" className="text-gray-600 hover:text-gray-900">
+      <Link href="mailto:marawasserman3@gmail.com" className="text-gray-600 hover:text-gray-900">
         <Mail size={24} />
         <span className="sr-only">Email</span>
       </Link>

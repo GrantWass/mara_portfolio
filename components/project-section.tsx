@@ -1,8 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Newspaper, Youtube } from 'lucide-react'
 
 interface ProjectSectionProps {
   id: string
@@ -12,78 +9,28 @@ interface ProjectSectionProps {
   additionalText?: string
   articleUrl?: string
   videoUrl?: string
+  pdfUrl?: string
 }
 
-export function ProjectSection({ id, title, description, images, additionalText = '', articleUrl, videoUrl }: ProjectSectionProps) {
+export function ProjectSection({ id, title, description, images, additionalText = '', articleUrl, videoUrl, pdfUrl }: ProjectSectionProps) {
+  const [name, recognition] = title.split(' | ')
   return (
-    <Card className="overflow-hidden mb-8">
-      <CardContent className="p-0">
-        <div className="grid grid-cols-8 grid-rows-6 gap-2 aspect-[2/1]">
-          <div className="relative col-span-5 row-span-6">
-            <Image
-              src={images[0]}
-              alt={`${title} - Main Image`}
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
-              <CardTitle className="text-xl font-bold text-white md:text-3xl">{title}</CardTitle>
-            </div>
-          </div>
-          {images.slice(1, 4).map((image, index) => (
-            <div key={index} className="relative col-span-3 row-span-2">
-              <Image
-                src={image}
-                alt={`${title} - Image ${index + 2}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
+    <article className="group">
+      <Link href={`/projects/${id}`} className="block" aria-label={`View ${name}`}>
+        <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+          <Image src={images[0]} alt={name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.025]" />
         </div>
-        <div className="p-6">
-        <CardDescription className="text-lg">{description}</CardDescription>
-        {(articleUrl || videoUrl) && (
-            <div className="flex gap-4 mt-4">
-              {articleUrl && (
-                <Link 
-                  href={articleUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <Newspaper size={18} />
-                  <span>Read Article</span>
-                </Link>
-              )}
-              {videoUrl && (
-                <Link 
-                  href={videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <Youtube size={18} />
-                  <span>Watch Video</span>
-                </Link>
-              )}
-            </div>
-          )}
-        </div>
-
-        <div className="flex flex-row sm:flex-row justify-between items-start sm:items-center gap-4 ml-6 mr-6 mb-4">
-          {additionalText && (
-            <div>
-              <p className="text-sm text-gray-600">{additionalText}</p>
-              
-            </div>
-          )}
-          <Button asChild>
-            <Link href={`/projects/${id}`}>Learn More</Link>
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
+        <h3 className="mt-5 text-2xl font-medium tracking-tight group-hover:underline underline-offset-4">{name}</h3>
+      </Link>
+      {recognition && <p className="mt-2 text-sm font-medium text-gray-600">{recognition}</p>}
+      <p className="mt-3 line-clamp-3 text-base leading-relaxed text-gray-600">{description}</p>
+      {additionalText && <p className="mt-4 text-sm leading-relaxed text-gray-500">{additionalText}</p>}
+      <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
+        <Link href={`/projects/${id}`} className="underline underline-offset-4">View project</Link>
+        {articleUrl && <Link href={articleUrl} target="_blank" rel="noopener noreferrer" className="text-gray-600 underline underline-offset-4">Read article</Link>}
+        {pdfUrl && <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" className="text-gray-600 underline underline-offset-4">PPD CD</Link>}
+        {videoUrl && <Link href={videoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-600 underline underline-offset-4">Watch film</Link>}
+      </div>
+    </article>
   )
 }
-

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 @layer base {
@@ -69,4 +69,33 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 8rem; }
+  body { color: #242824; }
+  ::selection { background: #e1e8df; }
+  a, button, summary { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 2px solid #435b45; outline-offset: 5px; }
+  summary::-webkit-details-marker { display: none; }
+  summary { list-style: none; }
+}
+
+@layer components {
+  .site-width { @apply mx-auto w-full max-w-[1440px] px-5 sm:px-10 lg:px-16; }
+  .site-header { @apply sticky top-0 z-40 border-b bg-white/95 backdrop-blur-md; }
+  .site-header nav a { @apply py-2 text-gray-600 transition-colors hover:text-black hover:underline underline-offset-8; }
+  .eyebrow { @apply text-xs font-medium uppercase tracking-[0.16em] text-gray-500; }
+  .section-heading { @apply mb-8 flex flex-wrap items-baseline justify-between gap-3 border-t pt-6; }
+  .section-heading h2 { @apply text-2xl font-medium tracking-tight; }
+  .section-heading > span { @apply text-sm text-gray-500; }
+  .background-grid > div > div { @apply rounded-none border-0 border-b shadow-none; }
+  .background-grid h3 { @apply text-xl font-medium tracking-tight; }
+  footer a { @apply inline-flex min-h-11 min-w-11 items-center justify-center; }
+  .skip-link { @apply fixed left-4 top-4 z-50 -translate-y-24 bg-white px-5 py-3 shadow-lg focus:translate-y-0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
